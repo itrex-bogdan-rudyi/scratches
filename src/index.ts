@@ -1,8 +1,10 @@
 import { performance } from "perf_hooks";
 
+// TODO: Determine and replace with some real average values
 const readFileDelay = 1000
 const convertFileDelay = 100
 const addToDocumentDelay = 10
+
 const urls = ['google.com', 'yahoo.com', 'aol.com', 'netscape.com', 'nt.com', 'bbc.com', 'fcbarcelona.com', 'netflix.com', 'fb.com', 'mozilla.com'];
 
 function runSequentialFlow() {
@@ -25,7 +27,7 @@ async function runParallelFlow() {
     const rawFilesPromises = urls.map((url, index) => readFileAsync(url, index + 1));
     const rawFiles = await Promise.all(rawFilesPromises);
 
-    // Convert files and add to document
+    // Convert and merge files
     for (let i = 0; i < rawFiles.length; i++) {
         const pdfFile = convertFileSync(rawFiles[i])
         document.push(addToDocumentSync(pdfFile));
