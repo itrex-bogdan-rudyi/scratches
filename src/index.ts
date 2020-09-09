@@ -65,6 +65,6 @@ function sleep(milliseconds: number) {
     } while (currentDate - date < milliseconds);
 }
 
-runParallelFlow();
 runSequentialFlow();
+runParallelFlow();
 
