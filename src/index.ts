@@ -5,7 +5,8 @@ const readFileDelay = 1000
 const convertFileDelay = 100
 const addToDocumentDelay = 10
 
-const urls = ['google.com', 'yahoo.com', 'aol.com', 'netscape.com', 'nt.com', 'bbc.com', 'fcbarcelona.com', 'netflix.com', 'fb.com', 'mozilla.com'];
+const urls = ['google.com', 'yahoo.com', 'aol.com', 'netscape.com', 'nt.com', 'bbc.com', 'fcbarcelona.com', 'netflix.com', 'fb.com', 'mozilla.com',
+    'google.com', 'yahoo.com', 'aol.com', 'netscape.com', 'nt.com', 'bbc.com', 'fcbarcelona.com', 'netflix.com', 'fb.com', 'mozilla.com'];
 
 function runSequentialFlow() {
     const start = performance.now();
